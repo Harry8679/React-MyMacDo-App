@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+import "./App.css";
+import Home from "./pages/Home";
+// import { ThemeProvider, Paper, Container } from '@mui/material/styles';
+import { ThemeProvider, createMuiTheme } from "@mui/material/styles";
+import { Container, Paper } from "@mui/material";
+import CssBaseline from "@mui/material/CssBaseline";
 
 function App() {
+  const theme = createMuiTheme({
+    typography: {
+      h1: { fontWeight: "bold" },
+      h2: {
+        fontSize: "2rem",
+        color: "black",
+      },
+      h3: {
+        fontSize: "1.8rem",
+        fontWeight: "bold",
+        color: "white",
+      },
+    },
+    palette: {
+      primary: { main: "#ff1744" },
+      secondary: {
+        main: "#118e16",
+        contrastText: "#fff",
+      },
+    },
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Container maxWidth="sm">
+        <Paper>
+          <Home />
+        </Paper>
+      </Container>
+    </ThemeProvider>
   );
 }
 
