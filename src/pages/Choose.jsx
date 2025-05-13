@@ -8,7 +8,7 @@ const Choose = () => {
         <Box className={[styles.root, styles.navy]}>
             <Box className={[styles.main, styles.center]}>
                 <Logo large></Logo>
-                <Typography>Where will you be eating today ?</Typography>
+                <Typography variant='h3' component='h3' className={styles.center} gutterBottom>Where will you be eating today ?</Typography>
             </Box>
         </Box>
     </Fade>
