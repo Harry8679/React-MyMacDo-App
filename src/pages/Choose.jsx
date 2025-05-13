@@ -6,8 +6,10 @@ const Choose = () => {
     const styles = useStyles();
     <Fade in={true}>
         <Box className={[styles.root, styles.navy]}>
-            <Logo large></Logo>
-            <Typography>Where will you be eating today ?</Typography>
+            <Box className={[styles.main, styles.center]}>
+                <Logo large></Logo>
+                <Typography>Where will you be eating today ?</Typography>
+            </Box>
         </Box>
     </Fade>
 }
