@@ -1,4 +1,4 @@
-import { Box, Fade, Typography } from '@mui/material';
+import { Box, Card, Fade, Typography } from '@mui/material';
 import Logo from "../components/Logo";
 import { useStyles } from '../styles';
 
@@ -9,6 +9,9 @@ const Choose = () => {
             <Box className={[styles.main, styles.center]}>
                 <Logo large></Logo>
                 <Typography variant='h3' component='h3' className={styles.center} gutterBottom>Where will you be eating today ?</Typography>
+                <Box className={styles.cards}>
+                    <Card className={[styles.card, styles.space]}></Card>
+                </Box>
             </Box>
         </Box>
     </Fade>
