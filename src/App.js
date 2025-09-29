@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import { ThemeProvider, createMuiTheme } from "@mui/material/styles";
 import { Container, Paper } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   const theme = createMuiTheme({
@@ -28,14 +29,16 @@ function App() {
     },
   });
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Container maxWidth="sm">
-        <Paper>
-          <Home />
-        </Paper>
-      </Container>
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Container maxWidth="sm">
+          <Paper>
+            <Home />
+          </Paper>
+        </Container>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 
