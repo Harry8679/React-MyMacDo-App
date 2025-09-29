@@ -4,7 +4,7 @@ import { TouchApp } from "@mui/icons-material";
 import { useStyles } from "../styles";
 import Logo from "../components/Logo";
 
-const Home = () => {
+const Home = (props) => {
   const styles = useStyles();
   return (
     <Card>
