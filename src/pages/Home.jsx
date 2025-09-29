@@ -13,7 +13,6 @@ const Home = () => {
   return (
     <Card>
       <CardActionArea onClick={() => navigate("/choose")}>
-        {/* <Box className={clsx(styles.root, styles.navy)}></Box> */}
         <Box className={clsx(styles.root, styles.red)}>
           <Box className={clsx(styles.main, styles.center)}>
             <Typography component="h6" variant="h6">
