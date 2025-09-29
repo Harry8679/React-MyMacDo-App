@@ -22,7 +22,16 @@ const Choose = () => {
                         </CardActionArea>
                     </Card>
 
-                    
+                    <Card className={[styles.card, styles.space]}>
+                        <CardActionArea>
+                            <CardMedia component="img" alt="Eat in" image="/images/eatin.png" className={styles.media} />
+                            <CardContent>
+                                <Typography gutterBottom variant="h4" color="textPrimary" component="p">
+                                    Take out
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                    </Card>
                 </Box>
             </Box>
         </Box>
