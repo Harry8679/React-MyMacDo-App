@@ -15,7 +15,7 @@ const Home = () => {
       <CardActionArea onClick={() => navigate("/choose")}>
         {/* <Box className={clsx(styles.root, styles.navy)}></Box> */}
         <Box className={clsx(styles.root, styles.red)}>
-          <Box className={[styles.main, styles.center]}>
+          <Box className={clsx(styles.main, styles.center)}>
             <Typography component="h6" variant="h6">
               Fast & Easy
             </Typography>
