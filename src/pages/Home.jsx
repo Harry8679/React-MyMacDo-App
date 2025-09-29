@@ -3,12 +3,15 @@ import { Card, CardActionArea, Box, Typography } from "@mui/material";
 import { TouchApp } from "@mui/icons-material";
 import { useStyles } from "../styles";
 import Logo from "../components/Logo";
+import { useNavigate } from "react-router-dom";
 
-const Home = (props) => {
+const Home = () => {
   const styles = useStyles();
+  const navigate = useNavigate(); // hook de navigation
+
   return (
     <Card>
-      <CardActionArea onClick={() => props.history.push('/choose')}>
+      <CardActionArea onClick={() => navigate("/choose")}>
         <Box className={[styles.root, styles.red]}>
           <Box className={[styles.main, styles.center]}>
             <Typography component="h6" variant="h6">
@@ -17,7 +20,7 @@ const Home = (props) => {
             <Typography component="h1" variant="h1">
               Order <br /> & pay <br /> here
             </Typography>
-            <TouchApp fontSize="large"></TouchApp>
+            <TouchApp fontSize="large" />
           </Box>
           <Box className={[styles.center, styles.green]}>
             <Logo large />
