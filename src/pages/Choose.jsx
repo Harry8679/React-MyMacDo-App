@@ -24,7 +24,7 @@ const Choose = () => {
 
                     <Card className={[styles.card, styles.space]}>
                         <CardActionArea>
-                            <CardMedia component="img" alt="Eat in" image="/images/eatin.png" className={styles.media} />
+                            <CardMedia component="img" alt="Eat in" image="/images/takeout.png" className={styles.media} />
                             <CardContent>
                                 <Typography gutterBottom variant="h4" color="textPrimary" component="p">
                                     Take out
