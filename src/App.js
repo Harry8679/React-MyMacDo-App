@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Container, Paper } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Choose from "./pages/Choose";
 
 function App() {
@@ -35,8 +35,10 @@ function App() {
         <CssBaseline />
         <Container maxWidth="sm">
           <Paper>
-            <Route path="/" component={<Home />} exact={true}></Route>
-            <Route path="/choose" component={<Choose />} exact={true}></Route>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/choose" element={<Choose />} />
+          </Routes>
           </Paper>
         </Container>
       </ThemeProvider>
