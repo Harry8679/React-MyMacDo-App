@@ -4,6 +4,7 @@ import { TouchApp } from "@mui/icons-material";
 import { useStyles } from "../styles";
 import Logo from "../components/Logo";
 import { useNavigate } from "react-router-dom";
+import clsx from "clsx";
 
 const Home = () => {
   const styles = useStyles();
@@ -12,7 +13,8 @@ const Home = () => {
   return (
     <Card>
       <CardActionArea onClick={() => navigate("/choose")}>
-        <Box className={[styles.root, styles.red]}>
+        {/* <Box className={clsx(styles.root, styles.navy)}></Box> */}
+        <Box className={clsx(styles.root, styles.red)}>
           <Box className={[styles.main, styles.center]}>
             <Typography component="h6" variant="h6">
               Fast & Easy
