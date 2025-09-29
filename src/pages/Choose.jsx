@@ -2,6 +2,7 @@ import { Box, Card, Fade, Typography } from '@mui/material';
 import Logo from "../components/Logo";
 import { useStyles } from '../styles';
 import { CardActionArea, CardContent, CardMedia } from '@material-ui/core';
+import clsx from "clsx";
 
 const Choose = () => {
     const styles = useStyles();
@@ -22,7 +23,7 @@ const Choose = () => {
                         </CardActionArea>
                     </Card>
 
-                    <Card className={[styles.card, styles.space]}>
+                    <Card className={clsx(styles.card, styles.space)}>
                         <CardActionArea>
                             <CardMedia component="img" alt="Eat in" image="/images/takeout.png" className={styles.media} />
                             <CardContent>
