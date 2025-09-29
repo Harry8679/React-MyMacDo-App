@@ -1,6 +1,7 @@
 import { Box, Card, Fade, Typography } from '@mui/material';
 import Logo from "../components/Logo";
 import { useStyles } from '../styles';
+import { CardActionArea, CardMedia } from '@material-ui/core';
 
 const Choose = () => {
     const styles = useStyles();
@@ -10,7 +11,11 @@ const Choose = () => {
                 <Logo large></Logo>
                 <Typography variant='h3' component='h3' className={styles.center} gutterBottom>Where will you be eating today ?</Typography>
                 <Box className={styles.cards}>
-                    <Card className={[styles.card, styles.space]}></Card>
+                    <Card className={[styles.card, styles.space]}>
+                        <CardActionArea>
+                            <CardMedia component="img" alt="Eat in" image="/images/eatin.png" className={styles.media} />
+                        </CardActionArea>
+                    </Card>
                 </Box>
             </Box>
         </Box>
