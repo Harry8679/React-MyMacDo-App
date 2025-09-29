@@ -1,13 +1,14 @@
 import "./App.css";
 import Home from "./pages/Home";
 // import { ThemeProvider, Paper, Container } from '@mui/material/styles';
-import { ThemeProvider, createMuiTheme } from "@mui/material/styles";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Container, Paper } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
+import Choose from "./pages/Choose";
 
 function App() {
-  const theme = createMuiTheme({
+  const theme = createTheme({
     typography: {
       h1: { fontWeight: "bold" },
       h2: {
@@ -34,7 +35,8 @@ function App() {
         <CssBaseline />
         <Container maxWidth="sm">
           <Paper>
-            <Home />
+            <Route path="/" component={<Home />} exact={true}></Route>
+            <Route path="/choose" component={<Choose />} exact={true}></Route>
           </Paper>
         </Container>
       </ThemeProvider>
